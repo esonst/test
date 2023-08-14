@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+</head>
+
+<body>
+    <form action="">
+        数量：
+        <select name="num">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option selected>5</option>
+        </select>
+        单价：<input type="text" name="danjia">
+        总价：<label type="text" name="total">0</label>
+        <button type="button" onclick="cal()">计算</button>
+        
+
+    </form>
+
+</body>
+<script>
+    function cal(){
+        var num=document.getElementsByName("num")[0];
+        var danjia=document.getElementsByName("danjia")[0];
+        var zongjia=document.getElementsByName("total")[0];
+        zongjia.innerHTML=num.value*danjia.value;
+    }
+    
+</script>
+</html>
